@@ -1,4 +1,4 @@
-# Journal del proyecto de Ciencia de Datos
+# Plan del proyecto de Ciencia de Datos
 
 Fecha: 17 de octubre de 2026
 
