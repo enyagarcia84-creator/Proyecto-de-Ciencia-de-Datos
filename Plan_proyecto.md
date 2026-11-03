@@ -8,7 +8,7 @@ Definir la pregunta de investigación, el alcance y la estructura metodológica 
 
 ## 2. Pregunta de investigación
 
-¿Qué equipos y sistemas solares anunciados en La Habana ofrecen la mejor relación entre precio y prestaciones energéticas, y cómo varían las alternativas disponibles según el presupuesto del comprador durante el período estudiado?
+¿Qué equipos y sistemas solares anunciados en La Habana ofrecen la mejor relación entre precio y prestaciones energéticas, y cómo varían las alternativas disponibles según el presupuesto del comprador durante el período estudiados? 
 
 ## 3. Importancia social
 
@@ -26,7 +26,7 @@ Ayudar a los compradores a comparar equipos solares y comprender qué prestacion
 
 - Identificador del anuncio.
 - Tipo de producto.
-- Marca y modelo.
+- Marca. 
 - Precio y moneda.
 - Fecha de consulta.
 - Potencia en watts.
@@ -34,8 +34,6 @@ Ayudar a los compradores a comparar equipos solares y comprender qué prestacion
 - Garantía.
 - Estado del producto.
 - Instalación y envío.
-- Componentes incluidos.
-- Fuente y observaciones.
 
 ## 6. Etapas del proyecto
 
