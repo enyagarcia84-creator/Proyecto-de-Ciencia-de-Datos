@@ -1,0 +1,272 @@
+{
+ "total_anuncios": 18909,
+ "total_entrevistas": 42,
+ "instituciones_lista": [
+  "Ahorro Solar La Habana",
+  "BazarVirtual Cuba",
+  "CIMEX - División Comercial Electro",
+  "COPEXTEL - Sucursal Infanta y Manglar",
+  "Cuballama Tecnologías",
+  "Cubamax Envíos",
+  "Cubatravelcorp Energy",
+  "DimeCuba",
+  "EcoFlow Cuba Directo",
+  "Ecosolar Cuba",
+  "Electro Habana",
+  "Empresa de Correos de Cuba",
+  "Habana888 Electrodomésticos",
+  "Havana Green Energy",
+  "Importadora Solares Cuba",
+  "Ingeniería Fotovoltaica Habana S.U.R.L.",
+  "MallHabana",
+  "ONFASE",
+  "Renovables Habana S.U.R.L.",
+  "Servicios Energéticos Capitalinos",
+  "SolAmérica Cuba",
+  "SolarCity Cuba",
+  "Suministros Industriales S.U.R.L.",
+  "Supermarket23",
+  "TecnoCuba Sur",
+  "Tienda Física Puerto Envío - CIMEX",
+  "Tienda Online Cubatrámite",
+  "Tiendas Caribe / TRD",
+  "TodoEnCuba",
+  "Vevor Direct Cuba"
+ ],
+ "mediana_global": 780,
+ "g1": {
+  "paneles": {
+   "n": 1119,
+   "pct": 6
+  },
+  "estaciones": {
+   "n": 10149,
+   "pct": 54
+  },
+  "baterias": {
+   "n": 2791,
+   "pct": 15
+  },
+  "inversores": {
+   "n": 4700,
+   "pct": 25
+  },
+  "kits": {
+   "n": 150,
+   "pct": 1
+  },
+  "veces_estaciones_vs_paneles": 9
+ },
+ "g2": {
+  "paneles": 160,
+  "estaciones": 770,
+  "baterias": 1111,
+  "inversores": 860,
+  "kits": 3750,
+  "kits_vs_paneles": 23,
+  "entrevistas_dentro": 38,
+  "entrevistas_n": 42
+ },
+ "g3": {
+  "paneles": {
+   "desde": 112,
+   "hasta": 300,
+   "veces": 3
+  },
+  "estaciones": {
+   "desde": 420,
+   "hasta": 2600,
+   "veces": 6
+  },
+  "baterias": {
+   "desde": 250,
+   "hasta": 3500,
+   "veces": 14
+  },
+  "inversores": {
+   "desde": 140,
+   "hasta": 2475,
+   "veces": 18
+  },
+  "kits": {
+   "desde": 298,
+   "hasta": 11500,
+   "veces": 39
+  }
+ },
+ "g4": [
+  {
+   "tramo": "Hasta 300 USD",
+   "estacion": 296,
+   "bateria": 1280
+  },
+  {
+   "tramo": "De 301 a 700 USD",
+   "estacion": 1024,
+   "bateria": 2560
+  },
+  {
+   "tramo": "De 701 a 1 500 USD",
+   "estacion": 2010,
+   "bateria": 5120
+  },
+  {
+   "tramo": "De 1 501 a 3 000 USD",
+   "estacion": 3072,
+   "bateria": 10000
+  },
+  {
+   "tramo": "Más de 3 000 USD",
+   "estacion": 4096,
+   "bateria": 16000
+  }
+ ],
+ "g5": {
+  "bateria_kwh": 230.0,
+  "estacion_kwh": 630.0,
+  "inversor_kw": 160.0,
+  "panel_kw": 280.0,
+  "estacion_vs_bateria": 2.7
+ },
+ "g6": {
+  "paneles": {
+   "con": 18,
+   "sin": 0,
+   "no_dice": 82
+  },
+  "estaciones": {
+   "con": 48,
+   "sin": 0,
+   "no_dice": 52
+  },
+  "baterias": {
+   "con": 32,
+   "sin": 2,
+   "no_dice": 66
+  },
+  "inversores": {
+   "con": 36,
+   "sin": 0,
+   "no_dice": 64
+  },
+  "kits": {
+   "con": 49,
+   "sin": 0,
+   "no_dice": 51
+  },
+  "total_con": 38,
+  "total_no_dice": 62
+ },
+ "g7": {
+  "instalacion_incluida": 36,
+  "instalacion_aparte": 18,
+  "envio_gratis": 43,
+  "envio_disponible": 13,
+  "componentes_completos": 17,
+  "componentes_parcial": 66
+ },
+ "g8": {
+  "estaciones": [
+   {
+    "nombre": "Oupes Exodus 2400",
+    "marca": "Oupes",
+    "wh": 2232,
+    "precio": 990,
+    "wh_100": 225,
+    "n": 39
+   },
+   {
+    "nombre": "Pecron F3000",
+    "marca": "Pecron",
+    "wh": 3072,
+    "precio": 1390,
+    "wh_100": 221,
+    "n": 19
+   },
+   {
+    "nombre": "Pecron E5000LFP",
+    "marca": "Pecron",
+    "wh": 5120,
+    "precio": 2400,
+    "wh_100": 213,
+    "n": 15
+   },
+   {
+    "nombre": "Aferiy P210",
+    "marca": "Aferiy",
+    "wh": 2048,
+    "precio": 990,
+    "wh_100": 207,
+    "n": 26
+   },
+   {
+    "nombre": "Oupes Guardian 6000",
+    "marca": "Oupes",
+    "wh": 4608,
+    "precio": 2350,
+    "wh_100": 196,
+    "n": 5
+   },
+   {
+    "nombre": "Oupes Exodus",
+    "marca": "Oupes",
+    "wh": 992,
+    "precio": 515,
+    "wh_100": 193,
+    "n": 26
+   }
+  ],
+  "baterias": [
+   {
+    "nombre": "Humsienk",
+    "marca": "Humsienk",
+    "wh": 8189,
+    "precio": 1435,
+    "wh_100": 571,
+    "n": 6
+   },
+   {
+    "nombre": "Sako SK-51.2V 300AH",
+    "marca": "Sako",
+    "wh": 15360,
+    "precio": 2750,
+    "wh_100": 559,
+    "n": 6
+   },
+   {
+    "nombre": "Felicity",
+    "marca": "Felicity",
+    "wh": 15000,
+    "precio": 2750,
+    "wh_100": 545,
+    "n": 5
+   },
+   {
+    "nombre": "Humsienk",
+    "marca": "Humsienk",
+    "wh": 2048,
+    "precio": 380,
+    "wh_100": 539,
+    "n": 11
+   },
+   {
+    "nombre": "Must LP16‐48300",
+    "marca": "Must",
+    "wh": 15000,
+    "precio": 2800,
+    "wh_100": 536,
+    "n": 5
+   },
+   {
+    "nombre": "Poeruni",
+    "marca": "Poeruni",
+    "wh": 2560,
+    "precio": 495,
+    "wh_100": 517,
+    "n": 12
+   }
+  ],
+  "med_est": 158,
+  "med_bat": 427
+ }
+}

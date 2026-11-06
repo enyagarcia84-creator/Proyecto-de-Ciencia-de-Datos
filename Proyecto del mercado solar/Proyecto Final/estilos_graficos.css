@@ -1,0 +1,66 @@
+/* Gráficos del artículo: barras y puntos en HTML y CSS.
+   Paleta: verde bosque #263F38, verde natural #496B5A, verde salvia #91A995,
+   verde niebla #DCE5D9, marfil #F7F5EF, blanco #FFFFFF. */
+
+.g { font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: #263F38; font-size: 15px; }
+.g .c1 { background: #496B5A; }
+.g .c2 { background: #91A995; }
+.g .c3 { background: #263F38; }
+.g .c4 { background: #263F38; color: #FFFFFF; }
+.g .c5 { background: #DCE5D9; color: #263F38; }
+
+.g-leyenda { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13px; color: #496B5A; margin-bottom: 18px; }
+.g-leyenda span { display: inline-flex; align-items: center; gap: 7px; }
+.g-leyenda i { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+.g-leyenda i.c5 { box-shadow: inset 0 0 0 1px #91A995; }
+
+.g-nota { font-size: 12.5px; color: #496B5A; margin: 18px 0 0; line-height: 1.5; }
+.g-bloque { font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: #496B5A; margin: 22px 0 10px; }
+.g-bloque:first-child { margin-top: 0; }
+.g-ref { font-size: 12.5px; color: #496B5A; margin: 4px 0 0; padding-top: 8px; border-top: 1px dashed #DCE5D9; }
+.g-sub { display: block; font-size: 12.5px; font-weight: 400; color: #496B5A; margin-top: 1px; }
+
+/* filas: etiqueta + pista. En pantallas anchas, una al lado de la otra; en el teléfono, apiladas */
+.g-fila { display: grid; grid-template-columns: 1fr; gap: 4px; margin-bottom: 14px; }
+.g-etq { font-size: 14px; font-weight: 500; color: #263F38; line-height: 1.3; }
+.g-pista { display: flex; align-items: center; gap: 10px; min-height: 24px; }
+.g-barra { height: 22px; border-radius: 0 6px 6px 0; flex: none; }
+.g-valor { font-size: 14px; color: #263F38; line-height: 1.3; min-width: 0; }
+.g-barras-h .g-valor { white-space: nowrap; }
+.g-valor b { font-weight: 600; }
+.g-vacio { color: #91A995; font-style: italic; }
+
+@media (min-width: 640px) {
+  .g-fila { grid-template-columns: 200px 1fr; gap: 16px; align-items: center; }
+  .g-ranking .g-fila { grid-template-columns: 240px 1fr; }
+}
+
+/* agrupadas: dos barras por grupo */
+.g-grupo { display: grid; grid-template-columns: 1fr; gap: 6px; margin-bottom: 18px; }
+.g-mini { min-height: 22px; margin-bottom: 4px; }
+.g-mini .g-barra { height: 18px; }
+@media (min-width: 640px) { .g-grupo { grid-template-columns: 200px 1fr; gap: 16px; align-items: center; } }
+
+/* columnas verticales */
+.g-barras-v { display: flex; align-items: flex-end; gap: clamp(8px, 3vw, 28px); height: 300px; padding-top: 8px; }
+.g-col { flex: 1; display: flex; flex-direction: column; align-items: center; height: 100%; min-width: 0; }
+.g-col .g-valor { font-size: clamp(11.5px, 3.1vw, 15px); font-weight: 600; margin-bottom: 6px; white-space: nowrap; }
+.g-col-pista { flex: 1; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; }
+.g-col .g-barra { width: min(72px, 100%); border-radius: 6px 6px 0 0; flex: none; }
+.g-barras-v { height: 320px; }
+.g-col .g-etq { font-size: clamp(11.5px, 3vw, 14px); text-align: center; margin-top: 8px; min-height: 2.6em; border-top: 1px solid #91A995; padding-top: 8px; width: 100%; }
+
+/* rango de precios: dos puntos unidos por una línea, escala logarítmica */
+.g-rango { position: relative; height: 54px; display: block; }
+.g-linea { position: absolute; top: 26px; height: 3px; background: #DCE5D9; border-radius: 2px; }
+.g-punto { position: absolute; top: 20px; width: 15px; height: 15px; border-radius: 50%; transform: translateX(-50%); box-shadow: 0 0 0 2px #FFFFFF; }
+.g-rango-txt { position: absolute; top: 0; transform: translateX(-50%); font-size: 13px; font-weight: 600; white-space: nowrap; color: #496B5A; }
+.g-rango-txt.fin { top: auto; bottom: -4px; color: #263F38; }
+.g-eje { position: relative; height: 20px; border-top: 1px solid #DCE5D9; }
+.g-eje span { position: absolute; top: 4px; transform: translateX(-50%); font-size: 11.5px; color: #496B5A; }
+.g-fila-eje { margin-top: -4px; }
+
+/* barras apiladas al 100 % */
+.g-apilada { display: flex; height: 30px; border-radius: 6px; overflow: hidden; gap: 2px; background: #FFFFFF; }
+.g-seg { display: flex; align-items: center; padding-left: 8px; font-size: 13px; font-weight: 600; color: #FFFFFF; white-space: nowrap; overflow: hidden; }
+.g-seg.c5 { color: #263F38; }

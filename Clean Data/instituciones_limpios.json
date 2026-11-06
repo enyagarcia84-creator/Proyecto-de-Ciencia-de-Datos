@@ -1,0 +1,93 @@
+[
+  {
+    "id": 27,
+    "seccion": "Sistemas o kits solares completos",
+    "lugar_o_tienda": "Ingeniería Fotovoltaica Habana S.U.R.L. (MPYME - Municipio Guanabacoa, La Habana)",
+    "datos": {
+      "precio_total": 4450.0,
+      "moneda": "USD",
+      "componentes_incluidos": "Inversor de 4 kW, Baterías de litio, Paneles fotovoltaicos, protecciones y cableado.",
+      "potencia_total_paneles_w": 4000,
+      "capacidad_total_baterias": null,
+      "marca_y_modelo_principales": "Kit Solar Residencial 4kW"
+    }
+  },
+  {
+    "id": 28,
+    "seccion": "Sistemas o kits solares completos",
+    "lugar_o_tienda": "Servicios Energéticos Capitalinos (MPYME - La Habana)",
+    "datos": {
+      "precio_total": 7550.0,
+      "moneda": "USD",
+      "componentes_incluidos": "Inversor comercial de 10 kW, Banco de baterías de litio de alta densidad, arreglos de paneles y montaje.",
+      "potencia_total_paneles_w": 10000,
+      "capacidad_total_baterias": null,
+      "marca_y_modelo_principales": "Kit Industrial / Comercial 10kW"
+    }
+  },
+  {
+    "id": 29,
+    "seccion": "Sistemas o kits solares completos",
+    "lugar_o_tienda": "COPEXTEL - Sucursal Calle E e/ 11 y 13 (Vedado, Plaza de la Revolución, La Habana)",
+    "datos": {
+      "precio_total": 55000.0,
+      "moneda": "CUP",
+      "componentes_incluidos": "Inversor On-Grid (inyectado a la red de 1 kW), Paneles solares, estructura de fijación, cables, montaje e instalación oficial.",
+      "potencia_total_paneles_w": 1000,
+      "capacidad_total_baterias": "Sistema Grid-Tied sin baterías",
+      "marca_y_modelo_principales": "Sistema Fotovoltaico Residencial COPEXTEL 1kW"
+    }
+  },
+  {
+    "id": 30,
+    "seccion": "Sistemas o kits solares completos",
+    "lugar_o_tienda": "Empresa de Correos de Cuba (Ventanilla de Servicios Especiales - La Habana)",
+    "datos": {
+      "precio_total": 2530000.0,
+      "moneda": "CUP",
+      "componentes_incluidos": "Inversor central, Paneles solares, Baterías de respaldo y kit de instalación.",
+      "potencia_total_paneles_w": 5000,
+      "capacidad_total_baterias": null,
+      "marca_y_modelo_principales": "Kit Fotovoltaico Correos 5 kW"
+    }
+  },
+  {
+    "id": 31,
+    "seccion": "Sistemas o kits solares completos",
+    "lugar_o_tienda": "Tiendas Caribe / TRD (Sucursal Tecnológica MLC - La Habana)",
+    "datos": {
+      "precio_total": 2750000.0,
+      "moneda": "CUP",
+      "componentes_incluidos": "Paneles solares de alta potencia, Inversor, Banco de baterías y kit de protecciones.",
+      "potencia_total_paneles_w": 6500,
+      "capacidad_total_baterias": null,
+      "marca_y_modelo_principales": "Kit Solar Fotovoltaico TRD 6.5 kW"
+    }
+  },
+  {
+    "id": 32,
+    "seccion": "Sistemas o kits solares completos",
+    "lugar_o_tienda": "CIMEX - División Comercial Electro (Habana del Este, La Habana)",
+    "datos": {
+      "precio_total": 3850000.0,
+      "moneda": "CUP",
+      "componentes_incluidos": "Arreglo solar de 10 kW, Inversor de alta capacidad, Banco de baterías de respaldo e instalación.",
+      "potencia_total_paneles_w": 10000,
+      "capacidad_total_baterias": null,
+      "marca_y_modelo_principales": "Kit Solar Comercial CIMEX 10 kW"
+    }
+  },
+  {
+    "id": 33,
+    "seccion": "Sistemas o kits solares completos",
+    "lugar_o_tienda": "COPEXTEL - Sucursal Infanta y Manglar (Centro Habana, La Habana)",
+    "datos": {
+      "precio_total": 4895000.0,
+      "moneda": "CUP",
+      "componentes_incluidos": "Inversor de 12 kW, Paneles solares de alta eficiencia, Sistema de baterías de litio, cuadro eléctrico e instalación certificada.",
+      "potencia_total_paneles_w": 12000,
+      "capacidad_total_baterias": null,
+      "marca_y_modelo_principales": "Kit Solar Fotovoltaico Estatal COPEXTEL 12 kW"
+    }
+  }
+]

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>¿Hasta dónde llega el dinero de un cubano en el mercado solar de La Habana?</title>
+<meta name="author" content="Enya Elena García Arrascaeta">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Identidad visual: verde natural + marfil, tipografía Inter */
+:root {
+  --bosque: #263F38;   /* títulos y textos destacados */
+  --natural: #496B5A;  /* elementos principales, gráficos, enlaces */
+  --salvia: #91A995;   /* datos secundarios y detalles */
+  --niebla: #DCE5D9;   /* fondos de bloques */
+  --marfil: #F7F5EF;   /* fondo general */
+  --blanco: #FFFFFF;   /* tarjetas */
+  --texto: #263F38;
+  --fuente: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--marfil); color: var(--texto); font-family: var(--fuente); font-weight: 400;
+        font-size: 17px; line-height: 1.75; }
+main { max-width: 720px; margin: 0 auto; padding: 0 22px 96px; }
+a { color: var(--natural); text-underline-offset: 3px; }
+strong { font-weight: 600; color: var(--bosque); }
+p { margin: 0 0 1.25em; }
+
+/* portada */
+.portada { padding: 72px 0 40px; border-bottom: 1px solid var(--niebla); margin-bottom: 44px; }
+.antetitulo { font-size: 12px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--natural); margin-bottom: 22px; }
+h1 { font-weight: 300; font-size: clamp(2.1rem, 7.5vw, 3.6rem); line-height: 1.1; letter-spacing: -.02em; color: var(--bosque); margin: 0 0 28px; }
+.firma { font-size: 15px; font-weight: 500; color: var(--natural); margin: 0; }
+
+.entrada { font-size: 1.18rem; font-weight: 300; line-height: 1.7; color: var(--bosque); }
+
+/* capítulos */
+.separador { display: flex; align-items: center; gap: 18px; margin: 72px 0 36px; color: var(--salvia); }
+.separador::before, .separador::after { content: ""; flex: 1; height: 1px; background: var(--niebla); }
+.separador span { font-weight: 300; font-size: 1.6rem; color: var(--natural); }
+.capitulo-num { font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--salvia); margin-bottom: 8px; }
+h2 { font-weight: 300; font-size: clamp(1.75rem, 5.5vw, 2.5rem); line-height: 1.15; letter-spacing: -.015em; color: var(--bosque); margin: 0 0 26px; }
+
+/* frases destacadas */
+.destacado { margin: 44px 0; padding: 0 0 0 22px; border-left: 2px solid var(--natural);
+              font-weight: 300; font-size: clamp(1.3rem, 4.6vw, 1.65rem); line-height: 1.4; color: var(--bosque); }
+
+/* transiciones entre capítulos */
+.transicion { background: var(--niebla); border-radius: 14px; padding: 28px 26px; margin: 56px 0 0; }
+.transicion p { margin: 0; font-weight: 300; font-size: 1.15rem; line-height: 1.6; color: var(--bosque); }
+
+/* «Lo que significa para usted» */
+.para-ti { background: var(--blanco); border: 1px solid var(--niebla); border-radius: 12px; padding: 18px 20px; font-size: .97rem; }
+.para-ti span { display: block; font-size: 11.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--natural); margin-bottom: 6px; }
+
+/* gráficos */
+.grafico { background: var(--blanco); border: 1px solid var(--niebla); border-radius: 16px; padding: 26px 20px 22px; margin: 40px -8px; }
+@media (min-width: 820px) { .grafico { margin: 48px -48px; padding: 34px 40px 28px; } }
+.g-num { font-size: 11.5px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--salvia); margin: 0 0 6px; }
+.grafico h3 { font-weight: 500; font-size: clamp(1.2rem, 4.4vw, 1.45rem); line-height: 1.3; color: var(--bosque); margin: 0 0 6px; }
+.g-desc { font-size: 14.5px; line-height: 1.5; color: var(--natural); margin: 0 0 24px; }
+
+/* conclusiones: tarjetas por presupuesto */
+.presupuestos { display: grid; grid-template-columns: 1fr; gap: 14px; margin: 30px 0 40px; }
+@media (min-width: 640px) { .presupuestos { grid-template-columns: 1fr 1fr; } }
+.tarjeta { background: var(--blanco); border: 1px solid var(--niebla); border-radius: 14px; padding: 22px 20px; }
+.tarjeta p { font-size: .95rem; line-height: 1.6; margin: 0; }
+.tarjeta .monto { font-weight: 600; font-size: 1.05rem; color: var(--natural); margin-bottom: 8px; }
+.recuadro { background: var(--niebla); border-radius: 14px; padding: 26px 24px 14px; margin: 40px 0; }
+.recuadro-titulo { font-weight: 500; font-size: 1.15rem; color: var(--bosque); margin-bottom: 10px; }
+.recuadro ol { margin: 0 0 12px; padding-left: 1.2em; }
+.recuadro li { margin-bottom: 8px; }
+.cierre { font-weight: 300; font-size: clamp(1.35rem, 4.8vw, 1.75rem); line-height: 1.4; color: var(--bosque); margin-top: 44px;
+           padding-top: 30px; border-top: 1px solid var(--niebla); }
+
+/* fuentes y autora */
+.fuentes, .autora { margin-top: 72px; padding-top: 32px; border-top: 1px solid var(--niebla); font-size: .95rem; }
+.fuentes h2, .autora h2 { font-weight: 500; font-size: 1.15rem; letter-spacing: 0; margin-bottom: 16px; }
+.fuentes > ul { list-style: none; padding: 0; margin: 0; }
+.fuentes > ul > li { margin-bottom: 12px; }
+.lista-inst { margin: 8px 0 0; padding-left: 1.1em; columns: 1; color: var(--natural); font-size: .9rem; line-height: 1.6; }
+@media (min-width: 640px) { .lista-inst { columns: 2; column-gap: 28px; } }
+.autora { background: var(--blanco); border: 1px solid var(--niebla); border-radius: 14px; padding: 26px 24px 12px; }
+
+/* Gráficos del artículo: barras y puntos en HTML y CSS.
+   Paleta: verde bosque #263F38, verde natural #496B5A, verde salvia #91A995,
+   verde niebla #DCE5D9, marfil #F7F5EF, blanco #FFFFFF. */
+
+.g { font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: #263F38; font-size: 15px; }
+.g .c1 { background: #496B5A; }
+.g .c2 { background: #91A995; }
+.g .c3 { background: #263F38; }
+.g .c4 { background: #263F38; color: #FFFFFF; }
+.g .c5 { background: #DCE5D9; color: #263F38; }
+
+.g-leyenda { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13px; color: #496B5A; margin-bottom: 18px; }
+.g-leyenda span { display: inline-flex; align-items: center; gap: 7px; }
+.g-leyenda i { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+.g-leyenda i.c5 { box-shadow: inset 0 0 0 1px #91A995; }
+
+.g-nota { font-size: 12.5px; color: #496B5A; margin: 18px 0 0; line-height: 1.5; }
+.g-bloque { font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: #496B5A; margin: 22px 0 10px; }
+.g-bloque:first-child { margin-top: 0; }
+.g-ref { font-size: 12.5px; color: #496B5A; margin: 4px 0 0; padding-top: 8px; border-top: 1px dashed #DCE5D9; }
+.g-sub { display: block; font-size: 12.5px; font-weight: 400; color: #496B5A; margin-top: 1px; }
+
+/* filas: etiqueta + pista. En pantallas anchas, una al lado de la otra; en el teléfono, apiladas */
+.g-fila { display: grid; grid-template-columns: 1fr; gap: 4px; margin-bottom: 14px; }
+.g-etq { font-size: 14px; font-weight: 500; color: #263F38; line-height: 1.3; }
+.g-pista { display: flex; align-items: center; gap: 10px; min-height: 24px; }
+.g-barra { height: 22px; border-radius: 0 6px 6px 0; flex: none; }
+.g-valor { font-size: 14px; color: #263F38; line-height: 1.3; min-width: 0; }
+.g-barras-h .g-valor { white-space: nowrap; }
+.g-valor b { font-weight: 600; }
+.g-vacio { color: #91A995; font-style: italic; }
+
+@media (min-width: 640px) {
+  .g-fila { grid-template-columns: 200px 1fr; gap: 16px; align-items: center; }
+  .g-ranking .g-fila { grid-template-columns: 240px 1fr; }
+}
+
+/* agrupadas: dos barras por grupo */
+.g-grupo { display: grid; grid-template-columns: 1fr; gap: 6px; margin-bottom: 18px; }
+.g-mini { min-height: 22px; margin-bottom: 4px; }
+.g-mini .g-barra { height: 18px; }
+@media (min-width: 640px) { .g-grupo { grid-template-columns: 200px 1fr; gap: 16px; align-items: center; } }
+
+/* columnas verticales */
+.g-barras-v { display: flex; align-items: flex-end; gap: clamp(8px, 3vw, 28px); height: 300px; padding-top: 8px; }
+.g-col { flex: 1; display: flex; flex-direction: column; align-items: center; height: 100%; min-width: 0; }
+.g-col .g-valor { font-size: clamp(11.5px, 3.1vw, 15px); font-weight: 600; margin-bottom: 6px; white-space: nowrap; }
+.g-col-pista { flex: 1; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; }
+.g-col .g-barra { width: min(72px, 100%); border-radius: 6px 6px 0 0; flex: none; }
+.g-barras-v { height: 320px; }
+.g-col .g-etq { font-size: clamp(11.5px, 3vw, 14px); text-align: center; margin-top: 8px; min-height: 2.6em; border-top: 1px solid #91A995; padding-top: 8px; width: 100%; }
+
+/* rango de precios: dos puntos unidos por una línea, escala logarítmica */
+.g-rango { position: relative; height: 54px; display: block; }
+.g-linea { position: absolute; top: 26px; height: 3px; background: #DCE5D9; border-radius: 2px; }
+.g-punto { position: absolute; top: 20px; width: 15px; height: 15px; border-radius: 50%; transform: translateX(-50%); box-shadow: 0 0 0 2px #FFFFFF; }
+.g-rango-txt { position: absolute; top: 0; transform: translateX(-50%); font-size: 13px; font-weight: 600; white-space: nowrap; color: #496B5A; }
+.g-rango-txt.fin { top: auto; bottom: -4px; color: #263F38; }
+.g-eje { position: relative; height: 20px; border-top: 1px solid #DCE5D9; }
+.g-eje span { position: absolute; top: 4px; transform: translateX(-50%); font-size: 11.5px; color: #496B5A; }
+.g-fila-eje { margin-top: -4px; }
+
+/* barras apiladas al 100 % */
+.g-apilada { display: flex; height: 30px; border-radius: 6px; overflow: hidden; gap: 2px; background: #FFFFFF; }
+.g-seg { display: flex; align-items: center; padding-left: 8px; font-size: 13px; font-weight: 600; color: #FFFFFF; white-space: nowrap; overflow: hidden; }
+.g-seg.c5 { color: #263F38; }
+
+</style>
+</head>
+<body>
+<main>
+<header class="portada">
+  <p class="antetitulo">Periodismo de datos · Energía</p>
+  <h1>¿Hasta dónde llega el dinero de un cubano en el mercado solar de La Habana?</h1>
+  <p class="firma">Por Enya Elena García Arrascaeta</p>
+</header>
+
+<section class="apertura">
+  <p class="entrada">Son las nueve de la noche y, otra vez, se fue la corriente. En un apartamento de Centro Habana el refrigerador se queda callado de golpe, el ventilador deja de girar y la casa se llena de ese silencio que todos conocemos. Alguien busca a tientas la linterna del teléfono. Otro calcula cuántas horas aguantará la comida. En la sala, una madre mira el techo y repite la frase que lleva semanas dando vueltas en la familia: «Tenemos que meternos en lo solar».</p>
+  <p>Imaginemos a esa familia. Ha guardado durante meses: parte de un salario, alguna ayuda que llegó de fuera, lo que se pudo apartar después de cada mandado. No es mucho, pero es todo. Y ahora tiene que decidir dónde ponerlo.</p>
+  <p>El problema es que nadie le ha enseñado a comprar energía. Abre Revolico y aparecen miles de anuncios: paneles, baterías, inversores, unas cajas llamadas «estaciones», sistemas «completos» con nombres en inglés. Los precios saltan de unos pocos cientos de dólares a varios miles. Cada vendedor asegura tener la mejor oferta. Un vecino recomienda una marca; un primo, otra. Al final de la noche la familia tiene más dudas que al principio.</p>
+  <blockquote class="destacado">Para muchas familias cubanas, la energía solar ya no es un lujo ecológico. Es la manera de que la vida siga funcionando cuando se va la luz.</blockquote>
+  <p>Este trabajo nace de esa misma pregunta: <strong>si una familia de La Habana tiene cierta cantidad de dinero y quiere invertir en energía solar, ¿qué puede comprar realmente?</strong> Para responderla analizamos 18 909 anuncios de equipos solares publicados en La Habana, conversamos con personas que ya hicieron su compra y consultamos los precios de tiendas e instituciones. Lo que sigue es lo que descubrimos, contado paso a paso, como lo viviría cualquier comprador.</p>
+</section>
+
+<div class="separador" aria-hidden="true"><span>I</span></div>
+
+<section>
+  <p class="capitulo-num">Capítulo I</p>
+  <h2>Un mercado lleno de cajas</h2>
+  <p>Lo primero que sorprende a quien entra en este mercado es su variedad. «Lo solar» no es un solo producto, sino una familia de equipos que cumplen funciones distintas. El <strong>panel</strong> capta la luz del sol. La <strong>batería</strong> guarda la energía para usarla cuando haga falta. El <strong>inversor</strong> la transforma en la corriente que usan los equipos de la casa. La <strong>estación portátil</strong> reúne batería e inversor en una sola caja que se carga y se enchufa. Y el <strong>sistema completo</strong> junta varias de esas piezas para alimentar una vivienda entera.</p>
+  <p>Con ese mapa en la mano, la primera pregunta es sencilla: ¿qué es lo que más se ofrece?</p>
+
+  <figure class="grafico" id="grafico-1"><p class="g-num">Gráfico 1</p><h3>La estación portátil manda</h3><p class="g-desc">Cantidad de anuncios de cada tipo de equipo solar publicados en La Habana.</p><div class="g g-barras-h"><div class="g-fila"><div class="g-etq">Estaciones portátiles</div><div class="g-pista"><div class="g-barra c1" style="width:56.0%"></div><span class="g-valor"><b>10 149</b> · 54 %</span></div></div><div class="g-fila"><div class="g-etq">Inversores</div><div class="g-pista"><div class="g-barra c2" style="width:25.9%"></div><span class="g-valor"><b>4 700</b> · 25 %</span></div></div><div class="g-fila"><div class="g-etq">Baterías</div><div class="g-pista"><div class="g-barra c2" style="width:15.4%"></div><span class="g-valor"><b>2 791</b> · 15 %</span></div></div><div class="g-fila"><div class="g-etq">Paneles solares</div><div class="g-pista"><div class="g-barra c2" style="width:6.2%"></div><span class="g-valor"><b>1 119</b> · 6 %</span></div></div><div class="g-fila"><div class="g-etq">Sistemas completos</div><div class="g-pista"><div class="g-barra c2" style="width:0.8%"></div><span class="g-valor"><b>150</b> · 1 %</span></div></div><p class="g-nota">Número de anuncios por tipo de equipo.</p></div></figure>
+
+  <p>La respuesta es contundente: <strong>más de la mitad de los anuncios son estaciones portátiles</strong>. Por cada anuncio de paneles hay unos 9 de estaciones. Les siguen, muy por detrás, los inversores y las baterías. Los paneles y los sistemas completos son los menos frecuentes entre los anuncios analizados.</p>
+  <p>Hay una explicación muy cubana para ese predominio. La estación portátil no necesita técnico, ni azotea, ni cables por la casa: se compra, se carga y se usa. Para una familia que vive en un apartamento, que alquila o que simplemente quiere salir del apuro esta misma semana, es la puerta de entrada más fácil a la energía solar. El mercado parece haberlo entendido y ha llenado los anuncios de estas cajas.</p>
+  <p class="para-ti"><span>Lo que significa para usted</span> Si busca una estación portátil, tendrá muchísimas opciones para comparar. Esa abundancia es una ventaja, siempre que no se quede con la primera que vea.</p>
+</section>
+
+<div class="transicion"><p>Saber qué se vende es solo el comienzo. La pregunta que de verdad quita el sueño es otra: ¿cuánto cuesta?</p></div>
+
+<div class="separador" aria-hidden="true"><span>II</span></div>
+
+<section>
+  <p class="capitulo-num">Capítulo II</p>
+  <h2>El precio de dar el primer paso</h2>
+  <p>Volvamos a nuestra familia. Ya sabe qué existe; ahora necesita saber cuánto le costará empezar. Para responder, buscamos el precio típico de cada tipo de equipo: el que está justo en el medio, con la mitad de los anuncios por encima y la otra mitad por debajo.</p>
+
+  <figure class="grafico" id="grafico-2"><p class="g-num">Gráfico 2</p><h3>¿Cuánto cuesta entrar?</h3><p class="g-desc">Precio típico de cada tipo de equipo en los anuncios de La Habana.</p><div class="g g-barras-v"><div class="g-col"><div class="g-col-pista"><span class="g-valor">160 USD</span><div class="g-barra c2" style="height:4.3%"></div></div><span class="g-etq">Paneles solares</span></div><div class="g-col"><div class="g-col-pista"><span class="g-valor">770 USD</span><div class="g-barra c2" style="height:20.5%"></div></div><span class="g-etq">Estaciones portátiles</span></div><div class="g-col"><div class="g-col-pista"><span class="g-valor">860 USD</span><div class="g-barra c2" style="height:22.9%"></div></div><span class="g-etq">Inversores</span></div><div class="g-col"><div class="g-col-pista"><span class="g-valor">1 111 USD</span><div class="g-barra c2" style="height:29.6%"></div></div><span class="g-etq">Baterías</span></div><div class="g-col"><div class="g-col-pista"><span class="g-valor">3 750 USD</span><div class="g-barra c1" style="height:100.0%"></div></div><span class="g-etq">Sistemas completos</span></div></div><p class="g-nota">Precio típico (mediana) de cada tipo de equipo, en USD.</p></figure>
+
+  <p>La escalera de precios es clara. <strong>El escalón más bajo es un panel solar, de unos 160 USD</strong>. Después vienen la estación portátil, alrededor de 770 USD, el inversor y la batería. Arriba del todo, lejos del resto, están los sistemas completos: <strong>unos 3 750 USD</strong>, más de veinte veces lo que cuesta un panel.</p>
+  <p>Pero un panel solo, sin batería ni inversor, no enciende un ventilador a las nueve de la noche. Por eso el precio de entrada engaña: lo barato no siempre resuelve el problema. Lo que una familia necesita saber no es solo cuánto cuesta cada pieza, sino cuánto cuesta tener algo que funcione en su casa.</p>
+  <p>Hay otra señal que vale la pena mirar. Los precios que pagaron las personas que entrevistamos se parecen mucho a los que piden los vendedores: 38 de las 42 compras que nos contaron están dentro del rango habitual de los anuncios. Lo que se ve en Revolico, en otras palabras, se parece bastante a lo que termina pagando la gente.</p>
+
+  <figure class="grafico" id="grafico-3"><p class="g-num">Gráfico 3</p><h3>El mismo equipo, precios muy distintos</h3><p class="g-desc">Desde los anuncios más baratos hasta los más caros de cada tipo de equipo.</p><div class="g g-puntos"><div class="g-leyenda"><span><i class="c2"></i>Los más baratos</span><span><i class="c1"></i>Los más caros</span></div><div class="g-fila"><div class="g-etq">Paneles solares</div><div class="g-pista g-rango"><div class="g-linea" style="left:10.3%;width:16.3%"></div><span class="g-punto c2" style="left:10.3%"></span><span class="g-punto c1" style="left:26.7%"></span><span class="g-rango-txt" style="left:10.3%">112 USD</span><span class="g-rango-txt fin" style="left:26.7%">300 USD</span></div></div><div class="g-fila"><div class="g-etq">Estaciones portátiles</div><div class="g-pista g-rango"><div class="g-linea" style="left:32.3%;width:30.2%"></div><span class="g-punto c2" style="left:32.3%"></span><span class="g-punto c1" style="left:62.5%"></span><span class="g-rango-txt" style="left:32.3%">420 USD</span><span class="g-rango-txt fin" style="left:62.5%">2 600 USD</span></div></div><div class="g-fila"><div class="g-etq">Baterías</div><div class="g-pista g-rango"><div class="g-linea" style="left:23.7%;width:43.7%"></div><span class="g-punto c2" style="left:23.7%"></span><span class="g-punto c1" style="left:67.4%"></span><span class="g-rango-txt" style="left:23.7%">250 USD</span><span class="g-rango-txt fin" style="left:67.4%">3 500 USD</span></div></div><div class="g-fila"><div class="g-etq">Inversores</div><div class="g-pista g-rango"><div class="g-linea" style="left:14.0%;width:47.6%"></div><span class="g-punto c2" style="left:14.0%"></span><span class="g-punto c1" style="left:61.7%"></span><span class="g-rango-txt" style="left:14.0%">140 USD</span><span class="g-rango-txt fin" style="left:61.7%">2 475 USD</span></div></div><div class="g-fila"><div class="g-etq">Sistemas completos</div><div class="g-pista g-rango"><div class="g-linea" style="left:26.6%;width:60.6%"></div><span class="g-punto c2" style="left:26.6%"></span><span class="g-punto c1" style="left:87.1%"></span><span class="g-rango-txt" style="left:26.6%">298 USD</span><span class="g-rango-txt fin" style="left:87.1%">11 500 USD</span></div></div><div class="g-fila g-fila-eje"><div class="g-etq"></div><div class="g-eje"><span style="left:8.5%">100</span><span style="left:26.7%">300</span><span style="left:46.6%">1 000</span><span style="left:64.9%">3 000</span><span style="left:84.8%">10 000</span></div></div><p class="g-nota">Precios en USD. Se dejan fuera los anuncios más extremos de cada lado.</p></div></figure>
+
+  <p>Si el gráfico anterior mostraba el precio típico, este muestra algo igual de importante: <strong>cuánto puede variar</strong>. Los paneles se mueven en un rango estrecho; casi todos cuestan entre 112 USD y 300 USD. En el resto de las categorías la distancia es enorme. Una batería puede costar desde 250 USD hasta 3 500 USD, y un sistema completo, desde unos cientos de dólares hasta más de diez mil.</p>
+  <p>Parte de esa diferencia es lógica: bajo el mismo nombre se venden equipos pequeños y grandes. Una batería para una lámpara no es una batería para toda la casa. Pero la conclusión para el comprador es la misma: <strong>el nombre del producto no dice cuánto debería pagar</strong>. Para saber si un precio es justo hay que mirar qué ofrece el equipo a cambio.</p>
+  <blockquote class="destacado">Dos anuncios pueden tener el mismo nombre y precios que se multiplican varias veces. La diferencia está en la letra pequeña: la capacidad, la potencia, lo que incluye.</blockquote>
+</section>
+
+<div class="transicion"><p>Y ahí aparece la pregunta que cambia la manera de mirar el mercado: no cuánto cuesta un equipo, sino cuánta energía da por lo que cuesta.</p></div>
+
+<div class="separador" aria-hidden="true"><span>III</span></div>
+
+<section>
+  <p class="capitulo-num">Capítulo III</p>
+  <h2>Cuánta energía cabe en el bolsillo</h2>
+  <p>Para quien vive con apagones, lo que importa es cuánto tiempo podrá mantener encendido lo esencial. Eso depende de la <strong>capacidad</strong> del equipo, que se mide en vatios-hora (Wh) o en kilovatios-hora (kWh). Una forma sencilla de imaginarlo: 1 kWh alcanza, más o menos, para mantener un ventilador encendido toda una noche y cargar los teléfonos de la casa.</p>
+
+  <figure class="grafico" id="grafico-4"><p class="g-num">Gráfico 4</p><h3>¿Cuánta energía puedo guardar con mi presupuesto?</h3><p class="g-desc">Capacidad típica de las estaciones portátiles y de las baterías de litio según el dinero disponible.</p><div class="g g-agrupado"><div class="g-leyenda"><span><i class="c1"></i>Estación portátil</span><span><i class="c2"></i>Batería de litio (necesita inversor)</span></div><div class="g-grupo"><div class="g-etq">Hasta 300 USD</div><div><div class="g-pista g-mini"><div class="g-barra c1" style="width:1.0%"></div><span class="g-valor"><b>296 Wh</b></span></div><div class="g-pista g-mini"><div class="g-barra c2" style="width:4.5%"></div><span class="g-valor"><b>1,3 kWh</b></span></div></div></div><div class="g-grupo"><div class="g-etq">De 301 a 700 USD</div><div><div class="g-pista g-mini"><div class="g-barra c1" style="width:3.6%"></div><span class="g-valor"><b>1,0 kWh</b></span></div><div class="g-pista g-mini"><div class="g-barra c2" style="width:9.0%"></div><span class="g-valor"><b>2,6 kWh</b></span></div></div></div><div class="g-grupo"><div class="g-etq">De 701 a 1 500 USD</div><div><div class="g-pista g-mini"><div class="g-barra c1" style="width:7.0%"></div><span class="g-valor"><b>2,0 kWh</b></span></div><div class="g-pista g-mini"><div class="g-barra c2" style="width:17.9%"></div><span class="g-valor"><b>5,1 kWh</b></span></div></div></div><div class="g-grupo"><div class="g-etq">De 1 501 a 3 000 USD</div><div><div class="g-pista g-mini"><div class="g-barra c1" style="width:10.8%"></div><span class="g-valor"><b>3,1 kWh</b></span></div><div class="g-pista g-mini"><div class="g-barra c2" style="width:35.0%"></div><span class="g-valor"><b>10,0 kWh</b></span></div></div></div><div class="g-grupo"><div class="g-etq">Más de 3 000 USD</div><div><div class="g-pista g-mini"><div class="g-barra c1" style="width:14.3%"></div><span class="g-valor"><b>4,1 kWh</b></span></div><div class="g-pista g-mini"><div class="g-barra c2" style="width:56.0%"></div><span class="g-valor"><b>16,0 kWh</b></span></div></div></div><p class="g-nota">Capacidad típica de los equipos anunciados en cada rango de precio. 1 kWh = 1 000 Wh.</p></div></figure>
+
+  <p>El gráfico cuenta una historia de escalones. Con hasta 300 USD, las estaciones que aparecen son pequeñas, apenas para lo más básico. <strong>Entre 301 y 700 USD aparece la estación típica de alrededor de 1 kWh</strong>, la que se ve en tantas casas habaneras. Entre 701 y 1 500 USD la capacidad se duplica. A partir de ahí, cada salto de presupuesto compra bastante más energía.</p>
+  <p>Pero hay un detalle que no se puede pasar por alto: <strong>con el mismo dinero, una batería de litio guarda bastante más energía que una estación</strong>. En casi todos los rangos de precio, la batería ofrece el doble o más. ¿Dónde está la trampa? La batería sola no basta: necesita un inversor y, normalmente, alguien que lo instale. La estación, en cambio, trae todo dentro y se usa sin más.</p>
+
+  <figure class="grafico" id="grafico-5"><p class="g-num">Gráfico 5</p><h3>Lo que cuesta cada kilovatio</h3><p class="g-desc">Precio típico de guardar 1 kWh de energía y de conseguir 1 kW de potencia, según el tipo de equipo.</p><div class="g g-barras-h"><p class="g-bloque">Guardar 1 kWh de energía</p><div class="g-fila"><div class="g-etq">Batería de litio</div><div class="g-pista"><div class="g-barra c2" style="width:20.7%"></div><span class="g-valor"><b>230 USD</b></span></div></div><div class="g-fila"><div class="g-etq">Estación portátil</div><div class="g-pista"><div class="g-barra c1" style="width:56.0%"></div><span class="g-valor"><b>630 USD</b></span></div></div><p class="g-bloque">Conseguir 1 kW de potencia</p><div class="g-fila"><div class="g-etq">Inversor híbrido</div><div class="g-pista"><div class="g-barra c2" style="width:13.8%"></div><span class="g-valor"><b>160 USD</b></span></div></div><div class="g-fila"><div class="g-etq">Paneles solares</div><div class="g-pista"><div class="g-barra c1" style="width:25.1%"></div><span class="g-valor"><b>280 USD</b></span></div></div><p class="g-nota">Precio típico por unidad de energía o de potencia.</p></div></figure>
+
+  <p>Este gráfico pone la diferencia en dinero. <strong>Guardar 1 kWh en una batería de litio cuesta unos 230 USD; en una estación portátil, unos 630 USD</strong>, casi tres veces más. La estación cobra la comodidad de tenerlo todo en una caja: el inversor, el cargador y los enchufes ya vienen incluidos.</p>
+  <p>Del lado de la potencia, conseguir 1 kW en paneles solares cuesta alrededor de 280 USD, y en un inversor híbrido, de los que gestionan paneles y baterías a la vez, unos 160 USD. Son piezas que no se usan solas, sino que se combinan para armar un sistema.</p>
+  <p>¿Qué conviene, entonces? Depende de la casa y de la familia. Quien necesita una solución inmediata, sin obras ni técnicos, encontrará en la estación portátil su mejor aliada, aunque pague más por cada kWh. Quien puede invertir algo más y pensar a largo plazo descubrirá que armar un sistema con batería e inversor rinde bastante más por cada dólar.</p>
+  <p class="para-ti"><span>Lo que significa para usted</span> Antes de comparar precios, compare lo que cuesta cada kWh. Es la forma más sencilla de saber si una oferta es buena de verdad.</p>
+</section>
+
+<div class="transicion"><p>Con precios y capacidades sobre la mesa, la familia ya casi está lista para elegir. Casi. Porque hay cosas que el anuncio no siempre cuenta.</p></div>
+
+<div class="separador" aria-hidden="true"><span>IV</span></div>
+
+<section>
+  <p class="capitulo-num">Capítulo IV</p>
+  <h2>Lo que el anuncio no dice</h2>
+  <p>Un equipo solar es una inversión que debe durar años. Por eso importa tanto lo que viene con él: si tiene garantía, si alguien lo instala, si lo traen hasta la casa, si trae todas las piezas necesarias para funcionar. Revisamos qué dicen los anuncios sobre cada uno de esos puntos.</p>
+
+  <figure class="grafico" id="grafico-6"><p class="g-num">Gráfico 6</p><h3>La garantía, la gran ausente</h3><p class="g-desc">Anuncios que ofrecen garantía, que dicen no tenerla o que no lo especifican, por tipo de equipo.</p><div class="g g-apiladas"><div class="g-leyenda"><span><i class="c1"></i>Ofrece garantía</span><span><i class="c4"></i>Sin garantía</span><span><i class="c5"></i>No lo especifica</span></div><div class="g-fila"><div class="g-etq">Paneles solares</div><div class="g-apilada"><div class="g-seg c1" style="width:18%">18 %</div><div class="g-seg c5" style="width:82%">82 %</div></div></div><div class="g-fila"><div class="g-etq">Estaciones portátiles</div><div class="g-apilada"><div class="g-seg c1" style="width:48%">48 %</div><div class="g-seg c5" style="width:52%">52 %</div></div></div><div class="g-fila"><div class="g-etq">Baterías</div><div class="g-apilada"><div class="g-seg c1" style="width:32%">32 %</div><div class="g-seg c4" style="width:2%"></div><div class="g-seg c5" style="width:66%">66 %</div></div></div><div class="g-fila"><div class="g-etq">Inversores</div><div class="g-apilada"><div class="g-seg c1" style="width:36%">36 %</div><div class="g-seg c5" style="width:64%">64 %</div></div></div><div class="g-fila"><div class="g-etq">Sistemas completos</div><div class="g-apilada"><div class="g-seg c1" style="width:49%">49 %</div><div class="g-seg c5" style="width:51%">51 %</div></div></div><p class="g-nota">Porcentaje de anuncios de cada tipo de equipo.</p></div></figure>
+
+  <p>El resultado es preocupante. <strong>La mayoría de los anuncios no dice nada sobre la garantía</strong>: solo alrededor de 38 de cada 100 la mencionan. Las estaciones portátiles y los sistemas completos son los que más la ofrecen, cerca de la mitad de las veces. En los paneles, en cambio, menos de uno de cada cinco anuncios la menciona.</p>
+  <p>Casi nadie escribe «sin garantía». Simplemente no lo dice. Y ese silencio no significa necesariamente que el equipo no la tenga, pero obliga al comprador a preguntar. Cuando se invierten cientos o miles de dólares, esa pregunta no es un detalle: es una protección.</p>
+
+  <figure class="grafico" id="grafico-7"><p class="g-num">Gráfico 7</p><h3>Instalación, envío y piezas: lo que viene y lo que no</h3><p class="g-desc">Qué anuncian los vendedores sobre la instalación, el envío y los componentes incluidos.</p><div class="g g-agrupado"><div class="g-grupo"><div class="g-etq">Instalación<span class="g-sub">sistemas completos</span></div><div><div class="g-pista g-mini"><div class="g-barra c1" style="width:21.6%"></div><span class="g-valor"><b>36 %</b> Incluida en el precio</span></div><div class="g-pista g-mini"><div class="g-barra c2" style="width:10.8%"></div><span class="g-valor"><b>18 %</b> Se ofrece aparte</span></div></div></div><div class="g-grupo"><div class="g-etq">Envío<span class="g-sub">todos los equipos</span></div><div><div class="g-pista g-mini"><div class="g-barra c1" style="width:25.8%"></div><span class="g-valor"><b>43 %</b> Gratis</span></div><div class="g-pista g-mini"><div class="g-barra c2" style="width:7.8%"></div><span class="g-valor"><b>13 %</b> Disponible, sin precisar costo</span></div></div></div><div class="g-grupo"><div class="g-etq">Componentes<span class="g-sub">sistemas completos</span></div><div><div class="g-pista g-mini"><div class="g-barra c1" style="width:10.2%"></div><span class="g-valor"><b>17 %</b> Detalla paneles, inversor y batería</span></div><div class="g-pista g-mini"><div class="g-barra c2" style="width:39.6%"></div><span class="g-valor"><b>66 %</b> Detalla solo una parte</span></div></div></div><p class="g-nota">Porcentaje de anuncios. El resto no menciona el servicio.</p></div></figure>
+
+  <p>El envío es lo que más se ofrece: en 43 de cada 100 anuncios es gratis, una ventaja real en una ciudad donde moverse cuesta. Con la instalación la historia cambia. En los sistemas completos, más o menos uno de cada tres anuncios la incluye en el precio y otros la ofrecen aparte, como un costo adicional.</p>
+  <p>Lo más llamativo está en los componentes. <strong>Solo 17 de cada 100 anuncios de sistemas completos detallan a la vez sus paneles, su inversor y su batería</strong>. Los demás cuentan solo una parte o no lo aclaran. Para el comprador, eso significa que el precio de un «kit completo» puede no ser el precio de un sistema funcionando.</p>
+  <blockquote class="destacado">El precio del anuncio no siempre es lo que cuesta tener la luz encendida. La diferencia suele estar en lo que no se escribió.</blockquote>
+  <p class="para-ti"><span>Lo que significa para usted</span> Antes de pagar, pregunte siempre: ¿tiene garantía, por cuánto tiempo y quién la respalda? ¿Está incluida la instalación? ¿Qué piezas trae exactamente?</p>
+</section>
+
+<div class="transicion"><p>Queda la pregunta final, la que todo comprador quiere responder: entre tantas opciones, ¿dónde rinde más el dinero?</p></div>
+
+<div class="separador" aria-hidden="true"><span>V</span></div>
+
+<section>
+  <p class="capitulo-num">Capítulo V</p>
+  <h2>Dónde rinde más cada dólar</h2>
+  <p>Encontrar la mejor compra no es encontrar el equipo más barato. Es encontrar el que da más energía por cada dólar invertido. Para verlo, comparamos solo equipos que cumplen la misma función: estaciones con estaciones y baterías con baterías. Calculamos cuánta energía se obtiene con cada 100 USD en los modelos que más se repiten en los anuncios.</p>
+
+  <figure class="grafico" id="grafico-8"><p class="g-num">Gráfico 8</p><h3>Los equipos que más energía dan por cada dólar</h3><p class="g-desc">Energía que se obtiene con cada 100 USD en los modelos más anunciados.</p><div class="g g-barras-h g-ranking"><p class="g-bloque">Estaciones portátiles</p><div class="g-fila"><div class="g-etq">1. Oupes Exodus 2400<span class="g-sub">2,2 kWh · unos 990 USD</span></div><div class="g-pista"><div class="g-barra c1" style="width:22.1%"></div><span class="g-valor"><b>225 Wh</b></span></div></div><div class="g-fila"><div class="g-etq">2. Pecron F3000<span class="g-sub">3,1 kWh · unos 1 390 USD</span></div><div class="g-pista"><div class="g-barra c1" style="width:21.7%"></div><span class="g-valor"><b>221 Wh</b></span></div></div><div class="g-fila"><div class="g-etq">3. Pecron E5000LFP<span class="g-sub">5,1 kWh · unos 2 400 USD</span></div><div class="g-pista"><div class="g-barra c1" style="width:20.9%"></div><span class="g-valor"><b>213 Wh</b></span></div></div><div class="g-fila"><div class="g-etq">4. Aferiy P210<span class="g-sub">2,0 kWh · unos 990 USD</span></div><div class="g-pista"><div class="g-barra c1" style="width:20.3%"></div><span class="g-valor"><b>207 Wh</b></span></div></div><div class="g-fila"><div class="g-etq">5. Oupes Guardian 6000<span class="g-sub">4,6 kWh · unos 2 350 USD</span></div><div class="g-pista"><div class="g-barra c1" style="width:19.2%"></div><span class="g-valor"><b>196 Wh</b></span></div></div><div class="g-fila"><div class="g-etq">6. Oupes Exodus<span class="g-sub">992 Wh · unos 515 USD</span></div><div class="g-pista"><div class="g-barra c1" style="width:18.9%"></div><span class="g-valor"><b>193 Wh</b></span></div></div><p class="g-ref">Lo habitual en esta categoría: 158 Wh por cada 100 USD</p><p class="g-bloque">Baterías de litio</p><div class="g-fila"><div class="g-etq">1. Humsienk<span class="g-sub">8,2 kWh · unos 1 435 USD</span></div><div class="g-pista"><div class="g-barra c3" style="width:56.0%"></div><span class="g-valor"><b>571 Wh</b></span></div></div><div class="g-fila"><div class="g-etq">2. Sako SK-51.2V 300AH<span class="g-sub">15,4 kWh · unos 2 750 USD</span></div><div class="g-pista"><div class="g-barra c3" style="width:54.8%"></div><span class="g-valor"><b>559 Wh</b></span></div></div><div class="g-fila"><div class="g-etq">3. Felicity<span class="g-sub">15,0 kWh · unos 2 750 USD</span></div><div class="g-pista"><div class="g-barra c3" style="width:53.5%"></div><span class="g-valor"><b>545 Wh</b></span></div></div><div class="g-fila"><div class="g-etq">4. Humsienk<span class="g-sub">2,0 kWh · unos 380 USD</span></div><div class="g-pista"><div class="g-barra c3" style="width:52.9%"></div><span class="g-valor"><b>539 Wh</b></span></div></div><div class="g-fila"><div class="g-etq">5. Must LP16‐48300<span class="g-sub">15,0 kWh · unos 2 800 USD</span></div><div class="g-pista"><div class="g-barra c3" style="width:52.6%"></div><span class="g-valor"><b>536 Wh</b></span></div></div><div class="g-fila"><div class="g-etq">6. Poeruni<span class="g-sub">2,6 kWh · unos 495 USD</span></div><div class="g-pista"><div class="g-barra c3" style="width:50.7%"></div><span class="g-valor"><b>517 Wh</b></span></div></div><p class="g-ref">Lo habitual en esta categoría: 427 Wh por cada 100 USD</p><p class="g-nota">Energía que se obtiene por cada 100 USD: cuanto más larga la barra, mejor. Precio típico de cada modelo. Las baterías necesitan además un inversor.</p></div></figure>
+
+  <p>Entre las estaciones portátiles, <strong>la Oupes Exodus 2400 encabeza la lista</strong>: por cada 100 USD ofrece unos 225 Wh, cuando lo habitual en su categoría ronda los 158 Wh. La siguen la Pecron F3000 y la Pecron E5000LFP. Llama la atención que varias de las marcas mejor situadas no son las más famosas ni las más anunciadas: el comprador que mira más allá del nombre conocido puede encontrar más energía por el mismo dinero.</p>
+  <p>Entre las baterías de litio, las que más rinden ofrecen 517 Wh o más por cada 100 USD, frente a unos 427 Wh de una batería típica. Encabeza la lista una Humsienk de 8 189 Wh, por unos 1 435 USD. Pero conviene recordarlo otra vez: una batería necesita un inversor para funcionar, y ese costo hay que sumarlo.</p>
+  <p>Este ranking no es una recomendación de compra. Un equipo puede rendir mucho por dólar y aun así no ser el adecuado para una casa concreta, o venderse sin garantía. Lo que sí ofrece es un punto de partida: una manera de saber, antes de negociar, cuánto debería dar un buen equipo por el dinero que cuesta.</p>
+</section>
+
+<div class="separador" aria-hidden="true"><span>·</span></div>
+
+<section class="conclusiones">
+  <p class="capitulo-num">Conclusiones</p>
+  <h2>Hasta dónde llega el dinero</h2>
+  <p>Volvamos a la sala de aquel apartamento de Centro Habana, a la familia que miraba el techo en la oscuridad. Después de recorrer el mercado, ya puede responder a la pregunta con la que empezó.</p>
+
+  <div class="presupuestos">
+    <div class="tarjeta">
+      <p class="monto">Hasta 300 USD</p>
+      <p>El dinero alcanza para dar un primer paso, pero no para resolver el apagón. Se puede comprar un panel solar o una estación pequeña, suficiente para la luz y los teléfonos. Es un comienzo, no una solución.</p>
+    </div>
+    <div class="tarjeta">
+      <p class="monto">De 300 a 700 USD</p>
+      <p>Aquí empieza el cambio real. En este rango aparece la estación portátil de alrededor de 1 kWh, la que permite pasar una noche con ventilador y teléfonos cargados. Es la opción que más familias pueden alcanzar y la que más se anuncia.</p>
+    </div>
+    <div class="tarjeta">
+      <p class="monto">De 700 a 1 500 USD</p>
+      <p>Las opciones se amplían. Se pueden encontrar estaciones de unos 2 kWh o baterías de litio de unos 5 kWh, que guardan mucha más energía, aunque necesitan un inversor. Es el momento de comparar con calma.</p>
+    </div>
+    <div class="tarjeta">
+      <p class="monto">Más de 1 500 USD</p>
+      <p>Con este presupuesto ya se puede pensar en un sistema que sostenga buena parte de la casa: estaciones grandes o la combinación de batería, inversor y paneles. Los sistemas completos rondan los 3 750 USD, y vale la pena revisar con lupa qué incluyen.</p>
+    </div>
+  </div>
+
+  <p>Más allá del presupuesto, los datos dejan tres lecciones claras.</p>
+  <p><strong>La primera: el precio, por sí solo, engaña.</strong> Equipos con el mismo nombre se venden a precios muy distintos, y lo barato puede no resolver nada si no viene acompañado de lo necesario para funcionar. La pregunta correcta no es «¿cuánto cuesta?», sino «¿cuánta energía me da por lo que cuesta?».</p>
+  <p><strong>La segunda: la comodidad tiene precio.</strong> La estación portátil es la reina del mercado porque se compra y se usa sin complicaciones. Pero cada kWh que guarda cuesta casi tres veces más que en una batería de litio. Para quien puede instalar un sistema, armarlo por piezas rinde bastante más. Para quien necesita una respuesta inmediata, la estación sigue siendo una buena elección, siempre que se compare bien.</p>
+  <p><strong>La tercera: lo que no se escribe también cuenta.</strong> La mayoría de los anuncios guarda silencio sobre la garantía, y muchos sistemas «completos» no detallan sus piezas. En un mercado donde cada dólar ha costado tanto reunir, preguntar no es desconfiar: es cuidar el esfuerzo de toda una familia.</p>
+
+  <aside class="recuadro">
+    <p class="recuadro-titulo">Antes de comprar, cinco preguntas</p>
+    <ol>
+      <li>¿Qué necesito mantener encendido, y durante cuántas horas?</li>
+      <li>¿Cuánto me cuesta cada kWh de este equipo, comparado con otros?</li>
+      <li>¿Tiene garantía? ¿Por cuánto tiempo y quién la respalda?</li>
+      <li>¿Es nuevo o usado?</li>
+      <li>¿Qué incluye el precio: envío, instalación, cables, protecciones?</li>
+    </ol>
+  </aside>
+
+  <p>La energía solar se ha convertido para muchas familias cubanas en algo más que una tecnología: es la posibilidad de conservar la comida, de dormir con un poco de aire, de que los niños hagan la tarea con luz. Por eso cada compra importa tanto, y por eso merece hacerse con información.</p>
+  <p>Este trabajo no pretende decirle a nadie qué debe comprar. Pretende algo más sencillo y, quizás, más útil: que la próxima vez que una familia abra un anuncio, sepa qué mirar, qué preguntar y cuánto debería recibir a cambio de su dinero.</p>
+  <p class="cierre">En un mercado donde cada inversión pesa, la información clara puede marcar la diferencia entre comprar por necesidad y comprar con conocimiento.</p>
+</section>
+
+<section class="fuentes">
+  <h2>Fuentes</h2>
+  <ul>
+    <li><strong>Revolico</strong>: datos extraídos durante todo el mes de octubre de 2026. <a href="https://www.revolico.com">revolico.com</a></li>
+    <li><strong>El Yerro Menú</strong>: datos extraídos durante todo el mes de octubre de 2026. <a href="https://elyerromenu.com">elyerromenu.com</a></li>
+    <li><strong>Entrevistas</strong> a compradores de equipos solares, realizadas en octubre de 2026.</li>
+    <li><strong>Instituciones</strong>: <ul class="lista-inst"><li>Ahorro Solar La Habana</li><li>BazarVirtual Cuba</li><li>CIMEX - División Comercial Electro</li><li>COPEXTEL - Sucursal Infanta y Manglar</li><li>Cuballama Tecnologías</li><li>Cubamax Envíos</li><li>Cubatravelcorp Energy</li><li>DimeCuba</li><li>EcoFlow Cuba Directo</li><li>Ecosolar Cuba</li><li>Electro Habana</li><li>Empresa de Correos de Cuba</li><li>Habana888 Electrodomésticos</li><li>Havana Green Energy</li><li>Importadora Solares Cuba</li><li>Ingeniería Fotovoltaica Habana S.U.R.L.</li><li>MallHabana</li><li>ONFASE</li><li>Renovables Habana S.U.R.L.</li><li>Servicios Energéticos Capitalinos</li><li>SolAmérica Cuba</li><li>SolarCity Cuba</li><li>Suministros Industriales S.U.R.L.</li><li>Supermarket23</li><li>TecnoCuba Sur</li><li>Tienda Física Puerto Envío - CIMEX</li><li>Tienda Online Cubatrámite</li><li>Tiendas Caribe / TRD</li><li>TodoEnCuba</li><li>Vevor Direct Cuba</li></ul></li>
+  </ul>
+</section>
+
+<section class="autora">
+  <h2>Sobre la autora</h2>
+  <p><strong>Enya Elena García Arrascaeta</strong> es estudiante de primer año de Ciencia de Datos en la Universidad de La Habana. Le interesa usar los datos para entender los problemas cotidianos de su ciudad y contarlos de forma clara, para que la información sirva a quienes más la necesitan.</p>
+</section>
+
+</main>
+</body>
+</html>

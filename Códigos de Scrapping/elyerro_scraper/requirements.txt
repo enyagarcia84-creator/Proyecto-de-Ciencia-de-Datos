@@ -1,0 +1,1 @@
+# No hace falta instalar nada: el script solo usa la biblioteca estandar de Python 3.8+
